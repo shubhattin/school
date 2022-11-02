@@ -1,0 +1,8 @@
+*.class
+*/a.java
+/build
+a.java
+a.py
+*/~$*.docx
+/proj/comp.pdf
+/proj/grayscale.pdf
