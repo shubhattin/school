@@ -2,7 +2,7 @@ import shubhlipi as sh
 import os
 
 sh.cmd('python karah.py')
-if sh.cmd('git switch pages')[0] == 0:
+if sh.cmd('git switch gh-pages')[0] == 0:
     for x in os.listdir('./'):
         if x not in ["build", ".git"]:
             sh.delete(x)
