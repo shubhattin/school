@@ -1,5 +1,3 @@
-**_Deployed Preview : [https://shubhamudi.github.io/school](https://shubhamudi.github.io/school/)_**
-
 - [Assignment](#assignment)
 - [Methods](#methods)
 - **[Arrays Questions](#arrays-isc)**
@@ -234,3 +232,5 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
    the user to add integers from the rear and remove integers from the front.[Here](./10/Queue.java)
 4. A bookshelf is designed to store the books in a stack with LIFO(Last In First Out
    operation. Define a class Book with the following specifications.Assume that the other functions have been defined. The main function need not be written.[Here](./10/Book.java)
+
+**_Deployed Preview : [https://shubhattin.github.io/school](https://shubhamudi.github.io/school/)_**
