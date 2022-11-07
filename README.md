@@ -233,4 +233,4 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
 4. A bookshelf is designed to store the books in a stack with LIFO(Last In First Out
    operation. Define a class Book with the following specifications.Assume that the other functions have been defined. The main function need not be written.[Here](./10/Book.java)
 
-**_Deployed Preview : [https://shubhattin.github.io/school](https://shubhamudi.github.io/school/)_**
+**_Deployed Preview : [https://shubhattin.github.io/school](https://shubhattin.github.io/school/)_**
