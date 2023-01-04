@@ -1,7 +1,7 @@
+#/usr/bin/env python
 import re
 import os
 import shubhlipi as sh
-# ^ download shubhlipi.py from https://shubhlipi.deta.dev/files/shubhlipi.py
 if len(sh.argv) == 0:
     exit()
 if sh.argv[0] == '--install':

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Copy this file to a location registered in 'PATH' and then chmod +x runjva
+# Now Use it anywhere
+javac "$1.java" && java "$1" && rm "$1.class"
