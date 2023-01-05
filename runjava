@@ -1,8 +1,12 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 if [ "$1" = "--install" ]; then
     cp "./runjava" "$HOME/.local/bin/"
     chmod +x "$HOME/.local/bin/runjava"
-else
-    javac "$1.java" && java "$1" && rm "$1.class"
+    echo "Installed `runjava`. Copied to \"$HOME/.local/bin\""
+    return
 fi
+
+javac "$1.java"
+java "$1"
+rm "$1.class"
