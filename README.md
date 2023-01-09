@@ -61,6 +61,10 @@
    [Here](./2/BubbleSort.java)
 3. Write a program to implement Matric Multiplication.
    [Here](./2/MatrixMul.java)
+4. Implement Binary Search.
+   [Here](./2/BinarySearch.java)
+5. Implement Binary Search using Recursion.
+   [Here](./2/BinarySearchRec.java)
 
 ## Arrays ISC
 
