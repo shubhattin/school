@@ -5,6 +5,8 @@ from pygments.formatters import HtmlFormatter
 
 c = 0
 
+# We are using Github Actions to deploy our site to Github Pages
+# This script will be invoked to build the output to 'build' folder
 
 def main():
     global c

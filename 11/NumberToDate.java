@@ -16,6 +16,10 @@ public class NumberToDate {
         year = sc.nextInt();
         System.out.print("Date After(in days): ");
         after = sc.nextInt();
+        if (after < 1 || after > 100) {
+            System.out.println("Date After should be between 1 and 100");
+            System.exit(0);
+        }
         sc.close();
     }
 

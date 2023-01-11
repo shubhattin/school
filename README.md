@@ -243,5 +243,11 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
 1. Writa a program to accept a sentence which may be terminated by either '.' or ? or '!' only.
    Any other character may be ignored. The words may be seperated by one or more than one blank spaces and in UPPER CASE.
    [Here](./12/Upper.java)
+2. Design a program to accept a day number (between 1 and 366), year (in 4 digits) from the user to generate and display the corresponding date. Also, accept ‘N’ (1 <= N <= 100) from the user to compute and display the future date corresponding to ‘N’ days after the generated date. Display an error message if the value of the day number, year and N are not within the limit or not according to the condition specified. [Here](./12/NumberToDate.java)
+3. Printing the **Consecutive** Numbers whose sum adds upto the number entered. **_Like_**
+   _ 9 = 4+5, 2+3+4
+   _ 27 = 2+3+4+5+6+7, 8+9+10, 13+14.<br>
+   [Here](./12/ConsecSum.java)
+4. Caeser Cipher. [Here](./12/CaeserCipher.java)
 
 **_Deployed Preview : [https://shubhattin.github.io/school](https://shubhattin.github.io/school/)_**

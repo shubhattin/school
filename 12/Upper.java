@@ -10,16 +10,16 @@ public class Upper {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a sentence: ");
         sent = sc.nextLine().toUpperCase();
-        System.out.println("Enter the word to insert: ");
-        wordToInsert = sc.next().toUpperCase();
-        System.out.println("Enter the word index: ");
-        wordIndex = sc.nextInt() - 1;
         // Checking if the sentence only ends in '.' or '?' or '!'
-        // using demorgan's to obtain the boolean expression below
+        // using demorgan's law to obtain the boolean expression below
         if (!sent.endsWith(".") && !sent.endsWith("?") && !sent.endsWith("!")) {
-            System.out.println("Invalid sentence!");
+            System.out.println("Invalid sentence");
             System.exit(-1);
         }
+        System.out.print("Enter the word to insert: ");
+        wordToInsert = sc.next().toUpperCase();
+        System.out.print("Enter the word position in the sentence: ");
+        wordIndex = sc.nextInt() - 1;
         sc.close();
     }
 
@@ -33,7 +33,7 @@ public class Upper {
             res += word + " ";
         }
         outSent = res;
-        System.out.println("The new sentence is:\n" + res);
+        System.out.println("The new sentence is:\n" + outSent);
     }
 
     public static void main(String[] args) {
@@ -44,7 +44,7 @@ public class Upper {
 }
 /*
  * Variable Description
- * Name | Type | Use
+ * Name | Type | Description
  * - | - | -
  * ***global***
  * sent | String | to store the sentence
