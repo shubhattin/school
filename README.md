@@ -9,6 +9,7 @@
 - [Inheritence](#inheritence)
 - **[Data Structures](#data-structures-implementation-and-questions)**
 - [Stack and Queue](#stack-and-queue)
+- [Assignments (Jan)](#assignments-jan)
 
 [Project Questions](./proj/ques.md)
 
@@ -236,5 +237,11 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
    the user to add integers from the rear and remove integers from the front.[Here](./10/Queue.java)
 4. A bookshelf is designed to store the books in a stack with LIFO(Last In First Out
    operation. Define a class Book with the following specifications.Assume that the other functions have been defined. The main function need not be written.[Here](./10/Book.java)
+
+## Assignments (Jan)
+
+1. Writa a program to accept a sentence which may be terminated by either '.' or ? or '!' only.
+   Any other character may be ignored. The words may be seperated by one or more than one blank spaces and in UPPER CASE.
+   [Here](./12/Upper.java)
 
 **_Deployed Preview : [https://shubhattin.github.io/school](https://shubhattin.github.io/school/)_**
