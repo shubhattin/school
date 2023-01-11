@@ -1,7 +1,6 @@
 from typing import Dict
 from markdown.extensions.toc import TocExtension
 import markdown, os, re, shubhlipi as sh, jinja2
-from requests import delete
 from pygments.formatters import HtmlFormatter
 
 c = 0
@@ -17,7 +16,7 @@ def main():
         print("Invalid Drive letter")
         exit(-1)
     elif len(sh.argv[0]) == 1:
-        lc = f"{sh.argv[0]}:\\{NM}"
+        lc = f"{sh.argv[0]}:/{NM}"
     if os.path.isfile(lc):
         sh.delete(lc)
     sh.makedir(lc)
@@ -57,23 +56,23 @@ def main():
         if x[-6:] == ".class" or x in ["build", ".git", ".vscode", "temp"]:
             continue
         if os.path.isfile(x):
-            sh.copy_file(x, lc + f"\\{x}")
+            sh.copy_file(x, lc + f"/{x}")
         elif os.path.isdir(x):
             dir_made = False
             for y in os.listdir(x):
                 if y in ["src"] or re.match(r"\.temp$", y):
                     continue
                 if re.match(r".+\.(pdf|docx|txt|md)$", y):
-                    sh.copy_file(f"{x}\\{y}", f"{lc}\\{x}\\{y}")
+                    sh.copy_file(f"{x}/{y}", f"{lc}/{x}/{y}")
                     continue
                 if y[-6:] == ".class" or not y.endswith(".java"):
                     continue
                 if not dir_made:
-                    sh.makedir(lc + f"\\{x}\\src")
+                    sh.makedir(lc + f"/{x}/src")
                 else:
                     dir_made = True
-                vl = sh.read(f"{x}\\{y}")
-                sh.write(f"{lc}\\{x}\\src\\{y}", vl)
+                vl = sh.read(f"{x}/{y}")
+                sh.write(f"{lc}/{x}/src/{y}", vl)
                 opt = dict(
                     code_highlight_css=f'<style>{HtmlFormatter(style="emacs", full=True,cssclass="codehilite").get_style_defs()}</style>',
                     title=y.split(".")[0],
@@ -92,14 +91,14 @@ def main():
                     variable = re.compile(r"^ \* ", re.MULTILINE).sub("", var_ref[0])
                     opt["variable"] = markdowninfy(variable, False)
                 sh.write(
-                    f"{lc}\\{x}\\{y.split('.')[0]}.html",
-                    render("prog.html", **opt),
+                    f"{lc}/{x}/{y.split('.')[0]}.html",
+                    render("prog.html.j2", **opt),
                 )
     README = README.replace("./proj/ques.md", "./proj/ques.html")
     sh.write(
-        lc + "\\index.html",
+        lc + "/index.html",
         render(
-            "home.html",
+            "home.html.j2",
             md_content=markdowninfy(README.replace(".java)", ".html)")),
             title=NM,
         ),
@@ -109,7 +108,7 @@ def main():
         sh.delete(f"{lc}/proj/ques.md")
         sh.write(
             f"{lc}/proj/ques.html",
-            render("ques.html", questions=markdowninfy(sh.read("proj/ques.md"))),
+            render("ques.html.j2", questions=markdowninfy(sh.read("proj/ques.md"))),
         )
     print(f"success in {round(sh.time() - tm, 3)}s")
 
