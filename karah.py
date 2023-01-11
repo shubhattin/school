@@ -114,10 +114,10 @@ def main():
 
 
 if __name__ == "__main__":
-    import keyboard as key
 
     if sh.args(0) == "watch":
         sh.argv.clear()
+        import keyboard as key
         main()
         key.add_hotkey("ctrl+shift+cmd", main)
         key.wait("shift+esc")
