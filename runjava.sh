@@ -2,14 +2,7 @@
 
 # A Simple Command Line Tool Simplify running single java programs
 
-if [ "$1" = "" ]; then 
-    echo "Provide a Java file to execute"
-    exit 1
-elif [ "$1" = "--install" ]; then
-    cp "./runjava.sh" "$HOME/.local/bin/runjava"
-    chmod +x "$HOME/.local/bin/runjava"
-    echo "Installed 'runjava'. Copied to \"$HOME/.local/bin\""
-elif [ -f "$1.java" ] ; then
+run_java(){
     if javac "$1.java"; then # compilling the java program to bytecode
         current_dir="$(pwd)"
         parent_dir="$(dirname "$1.java")"
@@ -20,6 +13,21 @@ elif [ -f "$1.java" ] ; then
         cd $current_dir
         # Restoring to the original directory, but its not needed
     fi
+}
+
+if [ "$1" = "" ]; then
+    echo "Provide a Java file to execute"
+    exit 1
+elif [ "$1" = "--install" ]; then
+    cp "./runjava.sh" "$HOME/.local/bin/runjava"
+    chmod +x "$HOME/.local/bin/runjava"
+    echo "Installed 'runjava'. Copied to \"$HOME/.local/bin\""
+elif [ -f "$1.java" ] ; then
+    # Without .java
+    run_java "$1"
+elif [[ -f "$1" ]] && [[ "$1" == *.java ]] ; then
+    # With .java
+    run_java "${1%.*}"
 else
     echo "$1.java not found"
     exit 1

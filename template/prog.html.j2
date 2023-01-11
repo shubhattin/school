@@ -1,100 +1,119 @@
 <!DOCTYPE html>
 <html lang="sa">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <style>
-      .mama pre {
-        margin: 0;
-      }
-      .mama {
-        border: 2px solid red;
-        padding: 10px;
-        font-size: 1.05rem;
-        border-radius: 10px;
-        max-height: 90%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      code {
-        font-family: Consolas;
-      }
-      body {
-        font-family: "Nirmala UI";
-      }
-      .algo > h2 {
-        color: green;
-      }
-      .algo h4 {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .algo .java_class {
-        font-weight: bold;
-        color: red;
-        font-size: 1.2em;
-      }
-      .algo h4 + ol {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .ques {
-        font-size: 16px;
-      }
-      .var > h2 {
-        text-align: center;
-        color: brown;
-      }
-      .var table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 4px;
-      }
-      .var table {
-        padding: 2px;
-        border-radius: 8px;
-        border: 2px solid black;
-      }
-      .var tbody tr td:nth-child(1) {
-        font-weight: 550;
-        color: darkblue;
-      }
-      .var tbody tr td:nth-child(2) {
-        font-weight: 550;
-        color: blue;
-      }
-      .var tbody > tr > td:first-child > strong {
-        color: red;
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      .var tbody > tr > td:first-child > strong > em {
-        color: black;
-      }
-    </style>
-    {{ code_highlight_css|safe }}
-  </head>
-  <body>
-    <a href="../index.html">Back</a>
-    <a href="./src/{{ title }}.java">Source</a>
-    {% if question -%}
-    <h3 class="ques">{{ question|safe }}</h3>
-    {% endif -%}
-    <div class="mama">{{ md_program|safe }}</div>
-    {% if alogorithm -%}
-    <div class="algo">
-      <h2>Algorithm</h2>
-      {{ alogorithm|safe }}
-    </div>
-    {% endif %} {% if variable -%}
-    <div class="var">
-      <h2>Variable Description</h2>
-      {{ variable|safe }}
-    </div>
-    {% endif %}
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <style>
+    .mama pre {
+      margin: 0;
+    }
+
+    .mama {
+      border: 2px solid red;
+      padding: 10px;
+      font-size: 1.05rem;
+      border-radius: 10px;
+      max-height: 90%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow-y: scroll;
+    }
+
+    code {
+      font-family: Consolas;
+    }
+
+    body {
+      font-family: "Nirmala UI";
+    }
+
+    .algo>h2 {
+      color: green;
+    }
+
+    .algo h4 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .algo .java_class {
+      font-weight: bold;
+      color: red;
+      font-size: 1.2em;
+    }
+
+    .algo h4+ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .ques {
+      font-size: 16px;
+    }
+
+    .var>h2 {
+      text-align: center;
+      color: brown;
+    }
+
+    .var table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 4px;
+    }
+
+    .var table {
+      padding: 2px;
+      border-radius: 8px;
+      border: 2px solid black;
+    }
+
+    .var tbody tr td:nth-child(1) {
+      font-weight: 550;
+      color: darkblue;
+    }
+
+    .var tbody tr td:nth-child(2) {
+      font-weight: 550;
+      color: blue;
+    }
+
+    .var tbody>tr>td:first-child>strong {
+      color: red;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    .var tbody>tr>td:first-child>strong>em {
+      color: black;
+    }
+  </style>
+  {{ code_highlight_css|safe }}
+</head>
+
+<body>
+  <a href="../index.html">Back</a>
+  <a href="./src/{{ title }}.java">Source</a>
+  {% if question -%}
+  <h3 class="ques">{{ question|safe }}</h3>
+  {% endif -%}
+  <div class="mama">{{ md_program|safe }}</div>
+  {% if alogorithm -%}
+  <div class="algo">
+    <h2>Algorithm</h2>
+    {{ alogorithm|safe }}
+  </div>
+  {% endif %} {% if variable -%}
+  <div class="var">
+    <h2>Variable Description</h2>
+    {{ variable|safe }}
+  </div>
+  {% endif %}
+</body>
+
 </html>
