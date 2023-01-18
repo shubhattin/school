@@ -249,5 +249,7 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
    _ 27 = 2+3+4+5+6+7, 8+9+10, 13+14.<br>
    [Here](./12/ConsecSum.java)
 4. Caeser Cipher. [Here](./12/CaeserCipher.java)
+5. Convert ASCII to Numbers. [Here](./12/ASCIItoNum.java)
+6. Convert Numbers to ASCII. [Here](./12/NumtoASCII.java)
 
 **_Deployed Preview : [https://shubhattin.github.io/school](https://shubhattin.github.io/school/)_**
