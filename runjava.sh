@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # A Simple Command Line Tool Simplify running single java programs
+# Prefer the pytho version, as that is more powefull
 
 run_java(){
     if javac "$1.java"; then # compilling the java program to bytecode
@@ -18,10 +19,11 @@ run_java(){
 if [ "$1" = "" ]; then
     echo "Provide a Java file to execute"
     exit 1
-elif [ "$1" = "--install" ]; then
-    cp "./runjava.sh" "$HOME/.local/bin/runjava"
-    chmod +x "$HOME/.local/bin/runjava"
-    echo "Installed 'runjava'. Copied to \"$HOME/.local/bin\""
+# currently suspending the install option to encourage using the python version
+# elif [ "$1" = "--install" ]; then
+#     cp "./runjava.sh" "$HOME/.local/bin/runjava"
+#     chmod +x "$HOME/.local/bin/runjava"
+#     echo "Installed 'runjava'. Copied to \"$HOME/.local/bin\""
 elif [ -f "$1.java" ] ; then
     # Without .java
     run_java "$1"
