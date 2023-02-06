@@ -13,6 +13,8 @@
 
 [Project Questions](./proj/ques.md)
 
+Tool for running java easily :- `[runjava](https://github.com/shubhattin/neovim-config/blob/main/wsl-config/other/runjava.py)`
+
 ## Assignment
 
 1. Checking saddle point of Matrx MxM.
