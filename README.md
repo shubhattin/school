@@ -13,7 +13,7 @@
 
 [Project Questions](./proj/ques.md)
 
-Tool for running java easily :- `[runjava](https://github.com/shubhattin/neovim-config/blob/main/wsl-config/other/runjava.py)`
+Tool for running java easily :- [`runjava`](https://github.com/shubhattin/neovim-config/blob/main/wsl-config/other/runjava.py)
 
 ## Assignment
 
