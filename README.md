@@ -258,4 +258,3 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
 
 1. Tower of Hanoi. [Here](./13/TowerOfHanoi.java)
 
-**_Deployed Preview : [https://shubhattin.github.io/school](https://shubhattin.github.io/school/)_**

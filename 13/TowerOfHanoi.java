@@ -9,17 +9,29 @@ public class TowerOfHanoi {
     input.close();
     System.out.println("The moves are:");
     // L = left, M = middle, R = right
-    tower.moveDisks(n, 'L', 'R', 'C');
+    tower.move(n, 'L', 'M', 'R');
   }
-  void moveDisks(int n, char fromTower, char toTower, char auxTower) {
-    if (n == 1) {
-      System.out.println("Move disk " + n + " from " + fromTower + " to " +
-                         toTower);
-    } else {
-      moveDisks(n - 1, fromTower, auxTower, toTower);
-      System.out.println("Move disk " + n + " from " + fromTower + " to " +
-                         toTower);
-      moveDisks(n - 1, auxTower, toTower, fromTower);
+  void move(int n, char from, char aux, char to) {
+    if (n != 0) {
+      // move n - 1 disks from from to aux
+      move(n - 1, from, to, aux);
+      // move the last disk from from to to
+      System.out.println("=> " + n + " :- " + from + " -> " + to);
+      // move n - 1 disks from aux to to
+      move(n - 1, aux, from, to);
     }
   }
+
+  // void move(int n, char from, char aux, char to) {
+  //   if (n == 1) {
+  //     System.out.println("=> " + n + " :- " + from + " -> " + to);
+  //   } else {
+  //     // move n - 1 disks from from to aux
+  //     move(n - 1, from, to, aux);
+  //     // move the last disk from from to to
+  //     System.out.println("=> " + n + " :- " + from + " -> " + to);
+  //     // move n - 1 disks from aux to to
+  //     move(n - 1, aux, from, to);
+  //   }
+  // }
 }
