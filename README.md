@@ -10,6 +10,7 @@
 - **[Data Structures](#data-structures-implementation-and-questions)**
 - [Stack and Queue](#stack-and-queue)
 - [Assignments (Jan)](#assignments-jan)
+- [Others](#others)
 
 [Project Questions](./proj/ques.md)
 
