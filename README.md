@@ -257,4 +257,9 @@ https://drive.google.com/drive/folders/1B1m1IhQbXwIn8JCZZegARtCEb9_0EcAe
 ## Others
 
 1. Tower of Hanoi. [Here](./13/TowerOfHanoi.java)
-
+2. Solving Simultaneous Linear Equations. [Here](./13/LinearSolver.java)
+   - `AX = B`
+   - Solution X[i] = Δ<sub>i</sub> / Δ
+   - Where Δ is the _determinant_ A(Equation Matrix)
+   - Where Δ<sub>i</sub> is determinant of the matrix obtained by Replacing `i'th` of the matrix `A` with `B`
+3. Inverse of a Matrix. [Here](./13/Inverse.java)
